@@ -1,0 +1,44 @@
+<div class="title">
+  {{product.name}}
+</div>
+
+<div class="video">
+  <iframe id="videoPlayer" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div class="container">
+  <div class="popup" [style.display]="popup">
+    <span>This product has no stock</span>
+    <div class="close">
+        <button (click)="displayPopup('close')"><i class="fa fa-times" aria-hidden="true"></i></button>
+    </div>
+</div>
+
+  <div class="product-visual">
+    <img  width="500" height="500" src={{product.image}} alt="productImage">
+  </div>
+
+  <div class="info">
+    <h1>Product Details</h1>
+    <p>{{product.name}}</p>
+    <p>${{product.price}}</p>
+    <p>Stock: {{product.quantity}}</p>
+
+    <br>
+    <br>
+    <div class="button-container">
+      <button (click)="addToCart(product);">Add to cart</button>
+      <button (click)="addToWishlist(product);">Add to Wishlist</button>
+      <button class="update-button" (click)="updateProducts()">Refresh Products</button>
+    </div>
+
+    <div class="rating" *ngIf="test">
+      <button (click)="upVoteProduct(product);">Up Vote Product</button>
+      <button (click)="downVoteProduct(product);">Down Vote Product</button>
+    </div>
+
+    <h2>{{product.upVotes}} Likes</h2>
+    <h2>{{product.downVotes}} Dislikes</h2>
+  </div>
+
+</div>

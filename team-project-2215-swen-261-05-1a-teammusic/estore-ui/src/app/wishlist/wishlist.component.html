@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="background-container">
+
+    <div class="title">
+        <h1>Wishlist</h1>
+    </div>
+
+    <div class="no_user" [style.display]="login">
+        <h1>Log in to view Wishlist</h1>
+    </div>
+
+    <div class="popup" [style.display]="popup">
+        <span>This product has no stock</span>
+        <div class="close">
+            <button (click)="displayPopup('close')"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+    </div>
+
+    <div class="refresh" [style.display]="logged">
+        <button class="update-button" (click)="updateProducts()">Refresh Products</button>
+    </div>
+
+    <div class="wishlist-menu">
+        <a *ngFor="let product of this.tempWishlist">
+            <div class="product-container">
+                <div class="product-image">
+                    <img src={{product.image}} alt="productImage" (click)="navigateToProductPage(product)">
+                </div>
+                <div class="product-info">
+                    <span class="badge">{{product.id}}</span> {{product.name}}
+                    <button *ngIf="this.isRemoveButtonVisible" (click)="removeFromList(product);">Remove from Wishlist</button>
+                    <button *ngIf="this.isRemoveButtonVisible" (click)="ListToCart(product);">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.background{
+    background-image: url(images/admin.jpg);
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+
+}
+
+ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    font-family: "Source Sans Pro","helvetica neue",helvetica,arial,sans-serif;
+  }
+h1 {
+    font-family: "Source Sans Pro","helvetica neue",helvetica,arial,sans-serif;
+}

@@ -1,0 +1,13 @@
+<div id="search-component">
+  <div class="bar">
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" placeholder="Search For Product">
+  </div>
+  
+    <ul class="search-result">
+      <li *ngFor="let product of products$ | async" >
+        <u (click)="navigateToProductPage(product)">{{product.name}} </u>
+        <button (click)="addToCart(product);">Add to cart</button>
+        <button (click)="addToWishlist(product);">Add to Wishlist</button>
+      </li>
+    </ul>
+  </div>

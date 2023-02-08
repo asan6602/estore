@@ -1,0 +1,53 @@
+<div class="background-container">
+
+  <div class="title">
+      Catalog
+  </div>
+
+  <app-product-search></app-product-search>
+
+  <div class="popup" [style.display]="popup">
+      <span>This product has no stock</span>
+      <div class="close">
+          <button (click)="displayPopup('close')"><i class="fa fa-times" aria-hidden="true"></i></button>
+      </div>
+  </div>
+
+  <div class="products-menu">
+      <a *ngFor="let product of products">
+          <div class="product-container">
+              <div class="product-image">
+                  <img src={{product.image}} alt="productImage" (click)="navigateToProductPage(product)">
+              </div>
+              <div class="product-info">
+                <span>
+                  {{product.name}}
+                  <br>
+                  ${{product.price}}
+                  <br>
+                  In Stock: {{product.quantity}}
+                </span>
+                <br>
+                <button (click)="addToCart(product);">Add to cart</button>
+                <button (click)="addToWishlist(product);">Add to Wishlist</button>
+              </div>
+          </div>
+      </a>
+  </div>
+</div>
+
+
+
+
+<!--
+<div class="list">
+<h1>List of products:</h1>
+<ul class="products">
+    <li *ngFor="let product of products">
+        <u (click)="navigateToProductPage(product)">{{product.name}} </u>
+        <button (click)="addToCart(product);">Add to cart</button>
+        <button (click)="addToWishlist(product);">Add to Wishlist</button>
+    </li>
+  </ul>
+</div>
+-->

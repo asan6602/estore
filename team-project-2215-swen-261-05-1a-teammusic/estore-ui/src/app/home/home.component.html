@@ -1,0 +1,41 @@
+<div class="container">
+
+  <div class="popout">
+
+    <div class="msg-container">
+      <div class="slider" [style.transform]="'translateX('+value+')'">
+        <div class="msg-col">
+          <h1>Mission Statement</h1>
+          <p>With fair deals and frequent sales, Music Store ROC is a music store specializing in the sale of vinyls, cds, and music playing devices.
+            We are family owned, and have served the Rochester area for 15 years.
+            We created this website to not only connect further with our loyal customers here in Rochester, but to expand
+            our services to everyone across the country.
+          </p>
+        </div>
+        <div class="msg-col">
+          <h1>Pictures</h1>
+          <img height="200" width="200" src="https://sideways.nyc/wp-content/uploads/2012/06/E-6th-439-A-1-Record-Shop-LV-3.jpg" alt="">
+          <img height="200" width="200" src="https://thevinylfactory.com/wp-content/uploads/2016/12/a1-records-1280x1294.jpg" alt="">
+          <img height="200" width="200" src="https://i.pinimg.com/564x/6d/12/ba/6d12ba5ca4ed5972b5f5b3d573b98c00--a--vinyl-records.jpg" alt="">
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="learn">
+      <div class="controller">
+        <div id="line1">
+          <button class="slider_line1" (click)="value='0'"><i class="fa fa-angle-left fa-3x" style="color:white" aria-hidden="true"></i></button>
+          <button class="slider_line2" (click)="value='-50%'"><i class="fa fa-angle-right fa-3x" style="color:white" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <a routerLink="/products">View Vinyl Catalog</a>
+    </div>
+
+    <div class="imagery">
+      <h1>Check Our New Kendrick Lamar Vinyl</h1>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,109 @@
+.container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,  url(images/tpab.png);
+  background-size: cover;
+  height: 130vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.popout {
+  display: flex;
+  width: 90%;
+  height: 110vh;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  background-color:rgba(0, 0, 0, 0.9);
+  position: absolute;
+  overflow: hidden;
+}
+
+.msg-container {
+  width: 600px;
+  left: 50%;
+  top: 62%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.slider {
+  display: inline-flex;
+  transition: 0.5s;
+}
+
+.msg-col {
+  width: 600px;
+  height: 280px;
+  padding-right: 50px;
+  display: flexbox;
+}
+
+.msg-col h1{
+  color: white;
+  font-family: "Source Sans Pro","helvetica neue",helvetica,arial,sans-serif;
+  font-size: 65px;
+  margin: 10px 0;
+}
+
+.msg-col p{
+  color: white;
+  font-family: "Source Sans Pro","helvetica neue",helvetica,arial,sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.learn {
+  width: 100%;
+  position: absolute;
+  top: 80%;
+  text-align: center;
+}
+
+.learn a {
+  display: inline-block;
+  background: rgb(24, 23, 23);
+  color: white;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  font-family: "Source Sans Pro","helvetica neue",helvetica,arial,sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+  .slider_line1{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding-right: 20px;
+  }
+
+  .slider_line2 {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .imagery{
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    background-image: url(images/vinyls.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+  }
+
+  .imagery h1 {
+    padding: 15px;
+    color: white;
+    font-family: "Source Sans Pro","helvetica neue",helvetica,arial,sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  

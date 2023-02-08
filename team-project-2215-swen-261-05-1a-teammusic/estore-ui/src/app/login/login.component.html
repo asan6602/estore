@@ -1,0 +1,37 @@
+<div class="container">
+
+    <div class="popup" [style.display]="popup">
+        <span>Account has been successfully created</span>
+        <div class="close">
+            <button (click)="displayPopup('close')"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+    </div>
+
+<div class="main">
+    <div class="loginField">
+        <p>Login:</p>
+        <label for="uname"><strong>Username:</strong></label>
+        <input placeholder="Username" #uname required>
+        <br>
+        <label for="pword"><strong>Password:</strong></label>
+        <input placeholder="Password" #pword required> 
+        <br>
+        <button type="submit" class="login-button" (click)="onClickSubmit(uname.value, pword.value);">
+            Login
+        </button>
+    </div>
+    <br>
+    
+    <br>
+    <div class="createAccount">
+        <p>Create Account:</p>
+        <label for="Username"><strong>Username:</strong></label>
+        <input placeholder="Username" #Username required>
+        <br>
+        <label for="Password"><strong>Password:</strong></label>
+        <input placeholder="Password" #Password required>
+        <br>
+        <button (click)="createUser(Username.value, Password.value, false, [], []);">Create</button>
+    </div>
+</div>
+</div>

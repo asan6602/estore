@@ -1,0 +1,56 @@
+<ul class="cartList">
+    <h1 class = "heading">Checkout Screen</h1>
+    <br>
+    <table *ngIf="isSubmitShown" class = "tab">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+            <br>
+        </thead>
+
+        <tbody>
+            <tr *ngFor = "let test of this.iterableCart">
+                <td>{{test.id}}</td>
+                <td>{{test.name}}</td>
+                <td>{{test.price}}</td>
+             </tr>
+        </tbody>
+    </table>
+    <br>
+    <label *ngIf="isLogin">Login to view your checkout</label>
+    <label *ngIf="isEmpty" class="label container-fluid" id="sss"> Your Cart is Empty</label>
+    <br>
+    <br>
+    <br>
+    <div *ngIf="isSubmitShown" class="submit-purchase"  id="divshow" >
+        <br>
+        <br>
+        <label class="totalPrice"> Total: ${{this.price}}.00</label>
+        <br>
+        <br>
+        <label class="warning-label">Please press "Refresh Products" before checking out.</label>
+        <br>
+        <br>
+        <button type="submit" class="purchase-button" (click)="clearCart()">Submit Purchase</button>
+        <br>
+        <br>
+        <button class="update-button" (click)="updateProducts()">Refresh Products</button>
+        <br>
+        <br>
+        <button class="back-button" (click)="navigateToCart()">Go Back to Cart</button>
+        <br>
+     </div>
+    <br>
+    <label *ngIf="isFail">{{failText}}</label>
+    <br>
+    <br>
+    <button *ngIf="isLogin" class="button container-fluid" id ="xxx" (click)="navigateToLogin()">Go to Login</button>
+    <button *ngIf="isEmpty" (click)="navigateToProducts()">Browse Products</button>
+    <br>
+    <br>
+    <button *ngIf="isEmpty" (click)="navigateToCart()">Go Back to Cart</button>
+    <br>
+</ul>

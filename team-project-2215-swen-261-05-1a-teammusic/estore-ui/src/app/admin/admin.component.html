@@ -1,0 +1,53 @@
+<body class="background">
+    <div class ="create">   
+        <h1>Create a product:</h1>
+        <label for="productName"><strong>Product Name</strong></label>
+            <input placeholder="name" #productName required>
+        <label for="productPrice"><strong>Product Price</strong></label>
+            <input type="number" placeholder="price" #productPrice required>
+        <label for="productQuantity"><strong>Product Quantity</strong></label>
+            <input type="number" placeholder="quantity" #productQuantity required>
+        <label for="imageLink"><strong>Image Link</strong></label>
+            <input placeholder="image" #imageLink required>
+        <label for="videoLink"><strong>Video Link</strong></label>
+            <input placeholder="video" #videoLink required>
+        <label for="upVotes"><strong>Up Votes</strong></label>
+            <input type="number" placeholder="upVotes" #upVotes required>
+        <label for="downVotes"><strong>Down Votes</strong></label>
+            <input type="number" placeholder="downVotes" #downVotes required>
+        <button (click)="addProduct(productName.value, productPrice.valueAsNumber, productQuantity.valueAsNumber, imageLink.value, videoLink.value, upVotes.valueAsNumber,downVotes.valueAsNumber);">Create</button>
+    </div>
+    <br>
+    <div class ="update">
+        <h1>Update a product:</h1>
+        <label for="updateID"><strong>Product ID</strong></label>
+            <input type="number" placeholder="id" #updateID required>
+        <label for="updateName"><strong>Product Name</strong></label>
+            <input placeholder="name" #updateName required>
+        <label for="updatePrice"><strong>Product Price</strong></label>
+            <input type="number" placeholder="price" #updatePrice required>
+        <label for="updateQuantity"><strong>Product Quantity</strong></label>
+            <input type="number" placeholder="quantity" #updateQuantity required>
+        <label for="updateImage"><strong>Image Link</strong></label>
+            <input placeholder="image" #updateImage required>
+        <label for="updateVideo"><strong>Video Link</strong></label>
+            <input placeholder="video" #updateVideo required>
+        <label for="upVotes"><strong>Up Votes</strong></label>
+            <input placeholder="upVotes" #upVotes required>
+        <label for="downVotes"><strong>Down Votes</strong></label>
+            <input placeholder="downVotes" #downVotes required>
+        <button (click)="updateProduct(updateID.valueAsNumber, updateName.value, updatePrice.valueAsNumber, updateQuantity.valueAsNumber, updateImage.value, updateVideo.value, upVotes.valueAsNumber,downVotes.valueAsNumber);">Update</button>
+    </div>
+    <br>
+    <h1>List of products:</h1>
+    <ul class="products">
+        <li *ngFor="let product of products">
+            <span class="badge">{{product.id}} {{product.name}} {{product.price}} {{product.quantity}} <img style="vertical-align:middle"  src={{product.image}}  alt="productImage" width="50" height="50"> </span> 
+            <button (click)="delete(product);">Delete</button>
+        </li>
+    </ul>
+    
+    
+    
+    
+</body>

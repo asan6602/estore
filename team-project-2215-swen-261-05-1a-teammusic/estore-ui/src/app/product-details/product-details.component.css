@@ -1,0 +1,115 @@
+
+
+.title {
+    text-align: center;
+    font-family: "Source Sans Pro","helvetica neue",helvetica,arial,sans-serif;
+    font-weight: lighter;
+    font-size: 32px;
+}
+
+.video {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.container{
+    display: flex;
+    border-style: solid;
+}
+
+.popup {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 75px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: "Source Sans Pro","helvetica neue",helvetica,arial,sans-serif;
+    font-weight: lighter;
+    font-size: 30px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 50%;
+}
+
+.refresh button {
+    background: rgb(24, 23, 23);
+    color: white;
+    border-radius: 30px;
+    font-family: "Source Sans Pro","helvetica neue",helvetica,arial,sans-serif;
+    font-size: 32px;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.product-visual{
+    background-color: rgba(0, 0, 0, 0.9);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+}
+
+.info{
+    text-align: center;
+    width: 35%;
+    font-family: "Source Sans Pro","helvetica neue",helvetica,arial,sans-serif;
+    font-weight: lighter;
+}
+
+.info h1 {
+    font-family: "Source Sans Pro","helvetica neue",helvetica,arial,sans-serif;
+    font-weight: lighter;
+    font-size: 60px;
+}
+
+p {
+    font-size: 28px;
+}
+
+.button-container button {
+    background: rgb(24, 23, 23);
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    font-family: "Source Sans Pro","helvetica neue",helvetica,arial,sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.rating button {
+    background: rgb(24, 23, 23);
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    font-family: "Source Sans Pro","helvetica neue",helvetica,arial,sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+h2 {
+    font-family: "Source Sans Pro","helvetica neue",helvetica,arial,sans-serif;
+    font-weight: lighter;
+}

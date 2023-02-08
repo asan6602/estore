@@ -1,0 +1,32 @@
+.cartList{
+    text-align: center;
+    margin-top: 10px;
+    background-color: #e7e7e7;
+    width: 45%;
+    height: fit-content;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.heading {
+    margin-top: 10px;
+}
+
+.submit-purchase{
+    text-align: center;
+}
+  
+  table {
+    text-align: center !important;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  td, th {
+    text-align: center;
+  }
+
+  button{
+    background-color: #ffffff;
+    padding: 5px;
+  }
