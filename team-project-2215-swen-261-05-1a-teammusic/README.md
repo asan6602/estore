@@ -1,6 +1,6 @@
 # E-Store:
 
-An online E-store system built in Java 8=>11 and ___ _replace with other platform requirements_ ___
+An online E-store system
   
 ## Team
 - Aaron Santos
